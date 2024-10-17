@@ -745,6 +745,48 @@ internal sealed class SuperIOHardware : Hardware
                         f.Add(new Fan("System Fan #2", 2));
                         f.Add(new Fan("Power Fan", 3));
 
+                        break;                        break;
+
+                    case Model.ROG_MAXIMUS_Z790_DARK_HERO: //NCT6798D
+                        v.Add(new Voltage("Vcore", 0));
+                        v.Add(new Voltage("+5V", 1, 4, 1));
+                        v.Add(new Voltage("AVSB", 2, 34, 34));
+                        v.Add(new Voltage("3VCC", 3, 34, 34));
+                        v.Add(new Voltage("+12V", 4, 11, 1));
+                        v.Add(new Voltage("IVR Atom L2 Cluster #1", 5));
+                        v.Add(new Voltage("Voltage #6", 6));
+                        v.Add(new Voltage("+3V Standby", 7, 34, 34));
+                        v.Add(new Voltage("CMOS Battery", 8, 34, 34));
+                        v.Add(new Voltage("CPU Termination", 9, 1, 1));
+                        v.Add(new Voltage("Voltage #11", 10, 1, 1));
+                        v.Add(new Voltage("IVR Atom L2 Cluster #0", 11, 1, 1));
+                        v.Add(new Voltage("PCH", 12));
+                        v.Add(new Voltage("CPU System Agent", 13, 1, 1));
+                        v.Add(new Voltage("CPU Input Auxiliary", 14, 1, 1));
+                        v.Add(new Voltage("Voltage #15", 15));
+
+                        t.Add(new Temperature("CPU Package", 0));
+                        t.Add(new Temperature("Motherboard", 2));
+                        t.Add(new Temperature("Chipset", 12));
+                        t.Add(new Temperature("PCH", 13));
+                        t.Add(new Temperature("CPU", 22));
+
+                        f.Add(new Fan("Chassis Fan #1", 0));
+                        f.Add(new Fan("CPU Fan", 1));
+                        f.Add(new Fan("Chassis Fan #2", 2));
+                        f.Add(new Fan("Chassis Fan #3", 3));
+                        f.Add(new Fan("Chassis Fan #4", 4));
+                        f.Add(new Fan("Water Pump", 5));
+                        f.Add(new Fan("AIO Pump", 6));
+
+                        c.Add(new Control("Chassis Fan #1", 0));
+                        c.Add(new Control("CPU Fan", 1));
+                        c.Add(new Control("Chassis Fan #2", 2));
+                        c.Add(new Control("Chassis Fan #3", 3));
+                        c.Add(new Control("Chassis Fan #4", 4));
+                        c.Add(new Control("Water Pump", 5));
+                        c.Add(new Control("AIO Pump", 6));
+
                         break;
 
                     case Model.P55_UD4: // IT8720F
@@ -1723,6 +1765,42 @@ internal sealed class SuperIOHardware : Hardware
                         c.Add(new Control("System Fan #2", 2));
                         c.Add(new Control("PCH Fan", 3));
                         c.Add(new Control("CPU Optional Fan", 4));
+
+                        break;
+
+                    case Model.X870_AORUS_ELITE_WIFI7:
+                        v.Add(new Voltage("Vcore", 0));
+                        v.Add(new Voltage("+3.3V", 1, 29.4f, 45.3f));
+                        v.Add(new Voltage("+12V", 2, 10f, 2f));
+                        v.Add(new Voltage("+5V", 3, 15f, 10f));
+                        v.Add(new Voltage("Vcore SoC", 4));
+                        v.Add(new Voltage("Vcore Misc", 5));
+                        v.Add(new Voltage("Dual DDR5 5V", 6, 1.5f, 1));
+                        v.Add(new Voltage("+3V Standby", 7, 10f, 10f));
+                        v.Add(new Voltage("CMOS Battery", 8, 10f, 10f));
+                        v.Add(new Voltage("AVCC3", 9, 59.9f, 9.8f));
+                        t.Add(new Temperature("System", 0));
+                        t.Add(new Temperature("PCH", 1));
+                        t.Add(new Temperature("CPU", 2));
+                        t.Add(new Temperature("PCIe x16", 3));
+                        t.Add(new Temperature("VRM MOS", 4));
+                        t.Add(new Temperature("VSoC MOS", 5));
+                        f.Add(new Fan("CPU Fan", 0));
+                        f.Add(new Fan("System Fan #1", 1));
+                        f.Add(new Fan("System Fan #2", 2));
+                        f.Add(new Fan("System Fan #3", 3));
+                        f.Add(new Fan("System Fan #4", 4));
+                        f.Add(new Fan("Fan/Pump #5", 5));
+                        f.Add(new Fan("Fan/Pump #6", 6));
+                        f.Add(new Fan("CPU Optional Fan", 5));
+                        c.Add(new Control("CPU Fan", 0));
+                        c.Add(new Control("System Fan #1", 1));
+                        c.Add(new Control("System Fan #2", 2));
+                        c.Add(new Control("System Fan #3", 3));
+                        c.Add(new Control("System Fan #4", 4));
+                        f.Add(new Control("Fan/Pump #5", 5));
+                        f.Add(new Control("Fan/Pump #6", 6));
+                        c.Add(new Control("CPU Optional Fan", 5));
 
                         break;
 
