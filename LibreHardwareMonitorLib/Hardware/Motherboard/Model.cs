@@ -203,6 +203,7 @@ public enum Model
     X399_AORUS_Gaming_7,
     X58A_UD3R,
     X79_UD3,
+    X870_AORUS_ELITE_WIFI7
     Z390_AORUS_ULTRA,
     Z390_AORUS_PRO,
     Z390_M_GAMING,

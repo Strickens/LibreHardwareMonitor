@@ -1768,16 +1768,16 @@ internal sealed class SuperIOHardware : Hardware
 
                         break;
 
-                    case Model.X870_AORUS_ELITE_WIFI7:
+                    case Model.X870_AORUS_ELITE_WIFI7: // IT8696E
                         v.Add(new Voltage("Vcore", 0));
                         v.Add(new Voltage("+3.3V", 1, 29.4f, 45.3f));
                         v.Add(new Voltage("+12V", 2, 10f, 2f));
                         v.Add(new Voltage("+5V", 3, 15f, 10f));
-                        v.Add(new Voltage("Vcore SoC", 4));
-                        v.Add(new Voltage("Vcore Misc", 5));
-                        v.Add(new Voltage("Dual DDR5 5V", 6, 1.5f, 1));
-                        v.Add(new Voltage("+3V Standby", 7, 10f, 10f));
-                        v.Add(new Voltage("CMOS Battery", 8, 10f, 10f));
+                        v.Add(new Voltage("CPU VCORE SoC", 4));
+                        v.Add(new Voltage("CPU VCORE MISC", 5));
+                        v.Add(new Voltage("CPU VDDIO_MEM", 6, 1.5f, 1));
+                        v.Add(new Voltage("3VSB", 7, 10f, 10f));
+                        v.Add(new Voltage("VBAT", 8, 10f, 10f));
                         v.Add(new Voltage("AVCC3", 9, 59.9f, 9.8f));
                         t.Add(new Temperature("System", 0));
                         t.Add(new Temperature("PCH", 1));
